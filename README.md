@@ -53,8 +53,6 @@ This project details the process of deploying and configuring essential network 
   </br>
   <em>Window 2000 Professional Configuration</em>
   </p>
-  
-</p>
 
 ---
 
