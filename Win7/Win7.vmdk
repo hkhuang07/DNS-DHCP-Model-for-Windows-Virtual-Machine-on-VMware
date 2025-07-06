@@ -1,0 +1,28 @@
+# Disk DescriptorFile
+version=1
+encoding="windows-1252"
+CID=42c66514
+parentCID=ffffffff
+createType="twoGbMaxExtentSparse"
+
+# Extent description
+RW 8323072 SPARSE "Win7-s001.vmdk"
+RW 8323072 SPARSE "Win7-s002.vmdk"
+RW 8323072 SPARSE "Win7-s003.vmdk"
+RW 8323072 SPARSE "Win7-s004.vmdk"
+RW 8323072 SPARSE "Win7-s005.vmdk"
+RW 8323072 SPARSE "Win7-s006.vmdk"
+RW 8323072 SPARSE "Win7-s007.vmdk"
+RW 8323072 SPARSE "Win7-s008.vmdk"
+RW 524288 SPARSE "Win7-s009.vmdk"
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "lsilogic"
+ddb.geometry.cylinders = "4177"
+ddb.geometry.heads = "255"
+ddb.geometry.sectors = "63"
+ddb.longContentID = "ccc8a921e08cb829e109764c42c66514"
+ddb.uuid = "60 00 C2 9c c6 92 c4 68-55 18 bc 07 c4 69 d0 e2"
+ddb.virtualHWVersion = "21"
