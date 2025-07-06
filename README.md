@@ -11,6 +11,17 @@
 
 This project details the process of deploying and configuring essential network services, **DNS** (Domain Name System) and **DHCP** (Dynamic Host Configuration Protocol), within a **VMware Workstation Pro** virtualized environment. The model includes a **Windows Server 2012 R2** machine acting as both DNS and DHCP Server, along with client machines running **Windows 7**, **Windows 2000 Professional**, and **Windows 2003** to test dynamic IP allocation and domain name resolution capabilities. The goal is to build a stable, manageable, and scalable internal network infrastructure.
 
+## Visual Setup Guide
+
+### Windows Server 2012 Ping Configuration
+![Windows Server 2012 Config and Ping to Client](demo/windowserver2012_config_ping.gif)
+
+### Additional Configuration Demos
+![Windows 7 Config](demo/win7_config.gif)
+![Windows 2003 Config](demo/win2k3_config.gif)
+![Windows 2000 Config](demo/win2k_config.gif)
+![Windows Server 2012 DHCP and DNS](demo/windowserver2012_dhcp_dns.gif)
+
 ---
 
 ## 📐 I. Model Analysis and Design
@@ -145,7 +156,7 @@ This section details the steps for installing and configuring DNS and DHCP servi
 ##### 1.1.1 Network Configuration for Windows Server 2012 R2 Server
 
 1.  <img src="https://img.icons8.com/color/20/000000/settings.png"/> Open **Network and Sharing Center** (Right-click the network icon on the Taskbar or via Control Panel).
-2.  <img src="https://img.icons8.com/color/20/000000/network-card.png"/> Select **"Change adapter settings"**.
+2.  <img src="https://img.icons8.com/color/20/000000/network-card.png"/> Select **"Changeısız adapter settings"**.
 3.  <img src="https://img.icons8.com/color/20/000000/ethernet-cable.png"/> Right-click **"Ethernet"** (or corresponding network card name) and select **"Properties"**.
 4.  <img src="https://img.icons8.com/color/20/000000/ipv4.png"/> Select **"Internet Protocol Version 4 (TCP/IPv4)"** and click **"Properties"**.
 5.  <img src="https://img.icons8.com/color/20/000000/ip-address.png"/> Select **"Use the following IP address"** and assign a static IP:
@@ -244,7 +255,7 @@ This section details the steps for installing and configuring DNS and DHCP servi
 1.  <img src="https://img.icons8.com/color/20/000000/laptop.png"/> **On client machines (Windows 7 and Windows 2000 Professional):**
     * **Configure automatic IP obtainment:**
         * **Windows 2000 Professional:** Right-click My Network Place $\rightarrow$ Properties $\rightarrow$ Right-click Local Area Connection $\rightarrow$ Properties $\rightarrow$ Select Internet Protocol (TCP/IP) $\rightarrow$ Properties $\rightarrow$ Select **"Obtain an IP address automatically"**. Enter Preferred DNS server: `192.168.250.2`.
-        * **Windows 7:** Click Network on Desktop $\rightarrow$ Properties $\rightarrow; Change adapter settings $\rightarrow$ Right-click Ethernet $\rightarrow$ Properties $\rightarrow$ Select Internet Protocol Version 4 (TCP/IPv4) $\rightarrow$ Properties $\rightarrow$ Select **"Obtain an IP address automatically"**. Enter Preferred DNS server: `192.168.250.2`.
+        * **Windows 7:** Click Network on Desktop $\rightarrow$ Properties $\rightarrow$ Change adapter settings $\rightarrow$ Right-click Ethernet $\rightarrow$ Properties $\rightarrow$ Select Internet Protocol Version 4 (TCP/IPv4) $\rightarrow$ Properties $\rightarrow$ Select **"Obtain an IP address automatically"**. Enter Preferred DNS server: `192.168.250.2`.
         * Click **OK** to save the configuration.
     * Open Command Prompt: Press `Window + R`, type `cmd`, and press `Enter`.
     * **Release old IP:** Type command: `ipconfig /release`
@@ -286,3 +297,4 @@ The DNS and DHCP system has been successfully deployed and configured, effective
 * <img src="https://img.icons8.com/color/20/000000/update.png"/> Upgrade the system to newer Windows Server versions to leverage advanced features and security.
 * <img src="https://img.icons8.com/color/20/000000/integration.png"/> Integrate additional essential network services such as Active Directory, Web Server (IIS), File Server, or VPN to build a more comprehensive infrastructure.
 * <img src="https://img.icons8.com/color/20/000000/expand.png"/> Expand the network scale to support multiple departments or new branches, potentially including VLANs and Routing.
+
