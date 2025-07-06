@@ -12,10 +12,7 @@
 *.vmsn
 *.vms
 *.vmwarevm/
-Win2K_Pro/
-Win2k12_Server/
-Win2k3/
-Win7/
+
 
 # Common document files
 *.docx
