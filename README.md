@@ -105,7 +105,11 @@ This project details the process of deploying and configuring essential network 
 * End devices will automatically obtain IP addresses from the DHCP Server and use the DNS Server for domain name resolution.
 
 #### 2.3 Network Diagram
-
+<p align="center">
+  <img src="demo/project_network_diagram.jpg" alt="Network Diagram" width="800">
+  </br>
+  <em>Network Diagram</em>
+</p>
 * **Server (DNS + DHCP):** `192.168.250.2`
 * **Gateway:** `192.168.250.1`
 * **Client:** Dynamic IP range from `192.168.250.10 – 192.168.250.29`
