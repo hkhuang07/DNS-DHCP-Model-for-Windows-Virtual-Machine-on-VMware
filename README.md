@@ -28,10 +28,30 @@ This project details the process of deploying and configuring essential network 
 
 ### Additional Configuration Clients
 <p align="center">
-  <img src="demo/windowserver2012_dhcp_dns.gif" alt="Window Server 2012 DHCP and DNS" width="400">
-  <img src="demo/win7_config.gif" alt="Window 7 Configuration" width="400"></br>
-  <img src="demo/win2k3_config.gif" alt="Window 2003 Configuration" width="400"> 
-  <img src="demo/win2k_config.gif" alt="Window 2000 Configuration" width="400">
+  <p align="center">
+  <img src="demo/windowserver2012_dhcp_dns.gif" alt="Window Server 2012 DHCP and DNS" width="800">
+  </br>
+  <em>Window Server 2012 DHCP and DNS</em>
+  </p>
+
+ <p align="center">
+  <img src="demo/win7_config.gif" alt="Window 7 Configuration" width="800">
+  </br>
+  <em>Window 7 Configuration</em>
+  </p>
+
+   <p align="center">
+  <img src="demo/win2k3_config.gif" alt="Window 2003 Configuration" width="800">
+  </br>
+  <em>Window 2003 Configuration</em>
+  </p>
+
+  <p align="center">
+  <img src="demo/win2k_config" alt="Window 2000 Professional Configuration" width="800">
+  </br>
+  <em>Window 2000 Professional Configuration</em>
+  </p>
+  
 </p>
 
 ---
