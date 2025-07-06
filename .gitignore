@@ -1,0 +1,28 @@
+# Files and folders to ignore in Git
+
+# VMware Virtual Machine files
+*.vmdk
+*.vmx
+*.vmxf
+*.vmsd
+*.nvram
+*.log
+*.lck
+*.vmem
+*.vmsn
+*.vms
+*.vmwarevm/
+Win2K_Pro/
+Win2k12_Server/
+Win2k3/
+Win7/
+
+# Common document files
+*.docx
+*.pdf
+*.pptx
+*.xlsx
+
+# Other specific files you might want to ignore
+desktop.ini
+folderico-green.ico
