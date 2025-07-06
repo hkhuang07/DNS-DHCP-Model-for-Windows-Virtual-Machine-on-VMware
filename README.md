@@ -15,9 +15,8 @@ This project details the process of deploying and configuring essential network 
 
 ### Windows Server 2012 Ping Configuration
 <p align="center">
-  <h3>Windows Server 2012 Config and Ping to Clients</h3>
   <img src="demo/windowserver2012_config_ping.gif" alt="Main Application Window" width="900">
-  <br>
+  </br>
   <em>Windows Server 2012 Configuration and Ping to Clients</em>
 </p>
 
@@ -84,6 +83,7 @@ This project details the process of deploying and configuring essential network 
 * **<img src="https://img.icons8.com/color/20/000000/laptop.png"/> End Devices (Clients):**
     * Operating systems:
         * Windows 2000 Professional
+        * Windows 2003 
         * Windows 7
     * Network parameters: Obtain dynamic IPs from DHCP Server, Preferred DNS Server: `192.168.250.2`.
 
