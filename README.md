@@ -14,7 +14,9 @@ This project details the process of deploying and configuring essential network 
 ## Visual Setup Guide
 
 ### Windows Server 2012 Ping Configuration
-![Windows Server 2012 Config and Ping to Client](demo/windowserver2012_config_ping.gif)
+<div align="center">
+  <img src="demo/windowserver2012_config_ping.gif alt="Windows Server 2012 Config and Ping to Client width=900" />
+</div>
 
 ### Additional Configuration Demos
 ![Windows 7 Config](demo/win7_config.gif)
