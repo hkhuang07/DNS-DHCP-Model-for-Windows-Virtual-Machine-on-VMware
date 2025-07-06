@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<VMId type="string">52 2c 80 c1 90 1c 2e f3-cf 0d 24 17 bb 60 40 7d</VMId>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<vmxPathName type="string">Win2k12_Server.vmx</vmxPathName></VM></Foundry>
