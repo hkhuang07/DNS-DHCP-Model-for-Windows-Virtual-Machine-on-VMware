@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Foundry>
+<VM>
+<VMId type="string">52 d7 b8 a2 a4 63 b8 88-64 29 2c d9 30 d0 82 58</VMId>
+<ClientMetaData>
+<clientMetaDataAttributes/>
+<HistoryEventList/></ClientMetaData>
+<vmxPathName type="string">Win2k_Pro.vmx</vmxPathName></VM></Foundry>

@@ -1,0 +1,22 @@
+# Disk DescriptorFile
+version=1
+encoding="windows-1252"
+CID=b8336575
+parentCID=ffffffff
+createType="twoGbMaxExtentSparse"
+
+# Extent description
+RW 4194304 SPARSE "Win2k_Pro-s001.vmdk"
+
+# The Disk Data Base 
+#DDB
+
+ddb.adapterType = "buslogic"
+ddb.geometry.cylinders = "293"
+ddb.geometry.heads = "255"
+ddb.geometry.sectors = "56"
+ddb.longContentID = "1f12027caf629ad13876cb6eb8336575"
+ddb.toolsInstallType = "1"
+ddb.toolsVersion = "10252"
+ddb.uuid = "60 00 C2 97 68 63 da 8c-45 2d 22 39 72 ea bd 71"
+ddb.virtualHWVersion = "21"
