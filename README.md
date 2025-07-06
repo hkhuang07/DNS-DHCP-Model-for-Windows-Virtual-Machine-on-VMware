@@ -21,18 +21,20 @@ This project details the process of deploying and configuring essential network 
 </p>
 
 <p align="center">
+  <p align="center">
+  <img src="demo/windowserver2012_dhcp_dns.gif" alt="Window Server 2012 DHCP and DNS" width="800">
+  </br>
+  <em>Window Server 2012 DHCP and DNS</em>
+  </p>
+
+
+<p align="center">
   <img src="demo/project_network_diagram.jpg" alt="Network Diagram" width="800">
   </br>
   <em>Network Diagram</em>
 </p>
 
 ### Additional Configuration Clients
-<p align="center">
-  <p align="center">
-  <img src="demo/windowserver2012_dhcp_dns.gif" alt="Window Server 2012 DHCP and DNS" width="800">
-  </br>
-  <em>Window Server 2012 DHCP and DNS</em>
-  </p>
 
  <p align="center">
   <img src="demo/win7_config.gif" alt="Window 7 Configuration" width="800">
