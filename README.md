@@ -42,16 +42,16 @@ This project details the process of deploying and configuring essential network 
   <em>Window 7 Configuration</em>
   </p>
 
-   <p align="center">
-  <img src="demo/win2k3_config.gif" alt="Window 2003 Configuration" width="800">
-  </br>
-  <em>Window 2003 Configuration</em>
+  <p align="center">
+    <img src="demo/win2k3_config.gif" alt="Window 2003 Configuration" width="800">
+    </br>
+    <em>Window 2003 Configuration</em>
   </p>
 
   <p align="center">
-  <img src="demo/win2k_config" alt="Window 2000 Professional Configuration" width="800">
-  </br>
-  <em>Window 2000 Professional Configuration</em>
+    <img src="demo/win2k_config" alt="Window 2000 Professional Configuration" width="800"/>
+    </br>
+    <em>Window 2000 Professional Configuration</em>
   </p>
 
 ---
