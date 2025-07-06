@@ -1,10 +1,19 @@
-# Network Administration Project: DNS and DHCP Deployment on VMware
+<div align="center">
+  <img src="https://img.shields.io/badge/Project-Network%20Administration-blue?style=for-the-badge&logo=networkmanager&logoColor=white" alt="Project Badge"/>
+  <img src="https://img.shields.io/badge/Services-DNS%20%26%20DHCP-success?style=for-the-badge&logo=dns&logoColor=white" alt="Services Badge"/>
+  <img src="https://img.shields.io/badge/Environment-VMware%20Workstation%20Pro-critical?style=for-the-badge&logo=vmware&logoColor=white" alt="VMware Badge"/>
+  <img src="https://img.shields.io/badge/OS-Windows%20Server%202012%20R2-informational?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Server Badge"/>
+</div>
 
-## Project Overview
+# 🌐 Network Administration Project: DNS and DHCP Deployment on VMware
 
-This project details the process of deploying and configuring essential network services, DNS (Domain Name System) and DHCP (Dynamic Host Configuration Protocol), within a VMware Workstation Pro virtualized environment. The model includes a Windows Server 2012 R2 machine acting as both DNS and DHCP Server, along with client machines running Windows 7, Windows 2000 Professional, and Windows 2003 to test dynamic IP allocation and domain name resolution capabilities. The goal is to build a stable, manageable, and scalable internal network infrastructure.
+## ✨ Project Overview
 
-## I. Model Analysis and Design
+This project details the process of deploying and configuring essential network services, **DNS** (Domain Name System) and **DHCP** (Dynamic Host Configuration Protocol), within a **VMware Workstation Pro** virtualized environment. The model includes a **Windows Server 2012 R2** machine acting as both DNS and DHCP Server, along with client machines running **Windows 7**, **Windows 2000 Professional**, and **Windows 2003** to test dynamic IP allocation and domain name resolution capabilities. The goal is to build a stable, manageable, and scalable internal network infrastructure.
+
+---
+
+## 📐 I. Model Analysis and Design
 
 ### 1. Requirements Analysis
 
@@ -17,10 +26,10 @@ This project details the process of deploying and configuring essential network 
     * Number of network bits in Subnet Mask: $32 - 5 = 27$.
     * **Suitable CIDR:** `/27` (Subnet Mask: `255.255.255.224`).
     * **Available IP range:** `192.168.250.10 – 192.168.250.29`.
-    * **Gateway:** `192.168.250.1`.
+    * **Gateway:** `192.166.250.1`.
     * **DNS Server:** `192.168.250.2`.
 
-* **DNS (Domain Name System):**
+* **<img src="https://img.icons8.com/color/20/000000/dns.png"/> DNS (Domain Name System):**
     * **Main function:** Converts domain names into IP addresses, making network device access easier.
     * **Supports internal domain name management and links with other services.**
     * **Supports basic DNS records:**
@@ -32,7 +41,7 @@ This project details the process of deploying and configuring essential network 
         * `Primary DNS Server`: Manages and stores primary data.
         * `Secondary DNS Server`: Provides redundancy and replicates data from the Primary to ensure availability.
 
-* **DHCP (Dynamic Host Configuration Protocol):**
+* **<img src="https://img.icons8.com/color/20/000000/dhcp-server.png"/> DHCP (Dynamic Host Configuration Protocol):**
     * **Main function:** Automatically assigns IP addresses and other network configuration parameters to end devices on the network.
     * **Supports additional information:**
         * `Subnet Mask`: `255.255.255.224` (consistent with /27).
@@ -42,13 +51,13 @@ This project details the process of deploying and configuring essential network 
 
 #### 1.2 Hardware Requirements (Virtual Machines)
 
-* **Servers:**
-    * Operating system: Windows Server 2012 R2 running DNS and DHCP services.
+* **<img src="https://img.icons8.com/color/20/000000/server.png"/> Servers:**
+    * Operating system: **Windows Server 2012 R2** running DNS and DHCP services.
     * Network parameters:
         * IP Address: `192.168.250.2` (Static IP).
         * Default Gateway: `192.168.250.1`.
         * Preferred DNS Server: `192.168.250.2`.
-* **End Devices (Clients):**
+* **<img src="https://img.icons8.com/color/20/000000/laptop.png"/> End Devices (Clients):**
     * Operating systems:
         * Windows 2000 Professional
         * Windows 7
@@ -56,9 +65,9 @@ This project details the process of deploying and configuring essential network 
 
 #### 1.3 Software Requirements
 
-* Server operating system: Windows Server 2012 R2.
+* Server operating system: **Windows Server 2012 R2**.
 * Tools: Server Manager for DNS and DHCP installation and configuration.
-* Virtualization environment: VMware Workstation Pro.
+* Virtualization environment: **VMware Workstation Pro**.
 
 ### 2. Model Design
 
@@ -123,7 +132,9 @@ This project details the process of deploying and configuring essential network 
     * DNS Server: `192.168.250.2`
     * Lease duration: 1 day.
 
-## II. Deployment and Testing
+---
+
+## 🛠️ II. Deployment and Testing
 
 This section details the steps for installing and configuring DNS and DHCP services on Windows Server 2012 R2, as well as how to test on client machines.
 
@@ -133,27 +144,27 @@ This section details the steps for installing and configuring DNS and DHCP servi
 
 ##### 1.1.1 Network Configuration for Windows Server 2012 R2 Server
 
-1.  Open **Network and Sharing Center** (Right-click the network icon on the Taskbar or via Control Panel).
-2.  Select **"Change adapter settings"**.
-3.  Right-click **"Ethernet"** (or corresponding network card name) and select **"Properties"**.
-4.  Select **"Internet Protocol Version 4 (TCP/IPv4)"** and click **"Properties"**.
-5.  Select **"Use the following IP address"** and assign a static IP:
+1.  <img src="https://img.icons8.com/color/20/000000/settings.png"/> Open **Network and Sharing Center** (Right-click the network icon on the Taskbar or via Control Panel).
+2.  <img src="https://img.icons8.com/color/20/000000/network-card.png"/> Select **"Change adapter settings"**.
+3.  <img src="https://img.icons8.com/color/20/000000/ethernet-cable.png"/> Right-click **"Ethernet"** (or corresponding network card name) and select **"Properties"**.
+4.  <img src="https://img.icons8.com/color/20/000000/ipv4.png"/> Select **"Internet Protocol Version 4 (TCP/IPv4)"** and click **"Properties"**.
+5.  <img src="https://img.icons8.com/color/20/000000/ip-address.png"/> Select **"Use the following IP address"** and assign a static IP:
     * **IP Address:** `192.168.250.2`
     * **Subnet Mask:** `255.255.255.224`
     * **Default Gateway:** `192.168.250.1`
     * **Preferred DNS Server:** `192.168.250.2`
-6.  Click **OK** to save the configuration.
+6.  <img src="https://img.icons8.com/color/20/000000/ok.png"/> Click **OK** to save the configuration.
 
 ##### 1.1.2 DNS Server Installation
 
-1.  **Open Server Manager:** Search for and select "Server Manager" from the Start Menu or Taskbar.
-2.  **Add DNS Server Role:**
+1.  <img src="https://img.icons8.com/color/20/000000/server.png"/> **Open Server Manager:** Search for and select "Server Manager" from the Start Menu or Taskbar.
+2.  <img src="https://img.icons8.com/color/20/000000/plus.png"/> **Add DNS Server Role:**
     * In Server Manager, select **"Manage"** $\rightarrow$ **"Add Roles and Features"**.
     * Click **"Next"** repeatedly until the **"Server Roles"** screen.
     * Check **"DNS Server"**.
     * Click **"Add Features"** when prompted.
     * Continue clicking **"Next"** and finally select **"Install"** to begin the installation.
-3.  **Create Forward Lookup Zone:**
+3.  <img src="https://img.icons8.com/color/20/000000/dns.png"/> **Create Forward Lookup Zone:**
     * After DNS Server installation, in Server Manager $\rightarrow$ **"Tools"** $\rightarrow$ **"DNS"** to open DNS Manager.
     * In DNS Manager, right-click **"Forward Lookup Zones"** and select **"New Zone..."**.
     * In the New Zone Wizard, click **"Next"**.
@@ -162,7 +173,7 @@ This section details the steps for installing and configuring DNS and DHCP servi
     * Select **"Create a new file with this file name:"** (default file name) $\rightarrow$ **"Next"**.
     * Choose **"Do not allow dynamic updates"** (or an option suitable for security requirements) $\rightarrow$ **"Next"**.
     * Click **"Finish"** to complete Zone creation.
-4.  **Configure Server as Domain Controller (optional, if Active Directory is desired):**
+4.  <img src="https://img.icons8.com/color/20/000000/active-directory.png"/> **Configure Server as Domain Controller (optional, if Active Directory is desired):**
     * After installing the DNS role, in Server Manager, you will see a yellow flag notification in the top right corner. Click it and select **"Promote this server to a domain controller"**.
     * In Deployment Configuration:
         * Select **"Add a new forest"**.
@@ -177,7 +188,7 @@ This section details the steps for installing and configuring DNS and DHCP servi
     * Review Options: Review the settings $\rightarrow$ **"Next"**.
     * Prerequisites Check: Wait for the system to check. If there are no errors, click **"Install"**.
     * After installation is complete, the server will require a **restart**. Restart the server.
-5.  **Join client machines to the Domain (on client machines):**
+5.  <img src="https://img.icons8.com/color/20/000000/domain.png"/> **Join client machines to the Domain (on client machines):**
     * **Configure DNS on client machines:** Ensure client machines are using the DNS Server IP `192.168.250.2`.
     * Open **System Properties**: Press `Window + R`, type `sysdm.cpl`, and press `OK`.
     * In the **"Computer Name"** tab (or "Network Identification"), click **"Change..."**.
@@ -187,13 +198,13 @@ This section details the steps for installing and configuring DNS and DHCP servi
 
 ##### 1.1.3 DHCP Server Installation
 
-1.  **Add DHCP Server Role:**
+1.  <img src="https://img.icons8.com/color/20/000000/server.png"/> **Add DHCP Server Role:**
     * In Server Manager, select **"Manage"** $\rightarrow$ **"Add Roles and Features"**.
     * Click **"Next"** repeatedly until the **"Server Roles"** screen.
     * Check **"DHCP Server"**.
     * Click **"Add Features"** when prompted.
     * Continue clicking **"Next"** and finally select **"Install"** to begin the installation.
-2.  **Configure DHCP Scope:**
+2.  <img src="https://img.icons8.com/color/20/000000/dhcp-server.png"/> **Configure DHCP Scope:**
     * After DHCP Server installation, in Server Manager, click the yellow flag notification in the top right corner and select **"Complete DHCP configuration"**.
     * In DHCP Manager (Server Manager $\rightarrow$ **"Tools"** $\rightarrow$ **"DHCP"**):
         * Navigate to: `<server name>` $\rightarrow$ `IPv4`.
@@ -218,19 +229,19 @@ This section details the steps for installing and configuring DNS and DHCP servi
 
 #### 2.1 Test DNS using `nslookup` and `ping` commands
 
-1.  **On client machines (Windows 7 and Windows 2000 Professional):**
+1.  <img src="https://img.icons8.com/color/20/000000/laptop.png"/> **On client machines (Windows 7 and Windows 2000 Professional):**
     * Open Command Prompt: Press `Window + R`, type `cmd`, and press `Enter`.
-2.  **Test domain name resolution with `nslookup`:**
+2.  <img src="https://img.icons8.com/color/20/000000/command-line.png"/> **Test domain name resolution with `nslookup`:**
     * Type command: `nslookup`
     * At the `>` prompt, type the domain name: `a.local` (or `group01networkadministrator.local`)
     * Check if it resolves correctly to IP `192.168.250.2`.
-3.  **Test connectivity to DNS server with `ping`:**
+3.  <img src="https://img.icons8.com/color/20/000000/ping.png"/> **Test connectivity to DNS server with `ping`:**
     * Type command: `ping 192.168.250.2`
     * Ensure you receive replies (Reply from...) to confirm connectivity.
 
 #### 2.2 Test DHCP by configuring clients to automatically obtain IP
 
-1.  **On client machines (Windows 7 and Windows 2000 Professional):**
+1.  <img src="https://img.icons8.com/color/20/000000/laptop.png"/> **On client machines (Windows 7 and Windows 2000 Professional):**
     * **Configure automatic IP obtainment:**
         * **Windows 2000 Professional:** Right-click My Network Place $\rightarrow$ Properties $\rightarrow$ Right-click Local Area Connection $\rightarrow$ Properties $\rightarrow$ Select Internet Protocol (TCP/IP) $\rightarrow$ Properties $\rightarrow$ Select **"Obtain an IP address automatically"**. Enter Preferred DNS server: `192.168.250.2`.
         * **Windows 7:** Click Network on Desktop $\rightarrow$ Properties $\rightarrow; Change adapter settings $\rightarrow$ Right-click Ethernet $\rightarrow$ Properties $\rightarrow$ Select Internet Protocol Version 4 (TCP/IPv4) $\rightarrow$ Properties $\rightarrow$ Select **"Obtain an IP address automatically"**. Enter Preferred DNS server: `192.168.250.2`.
@@ -238,10 +249,10 @@ This section details the steps for installing and configuring DNS and DHCP servi
     * Open Command Prompt: Press `Window + R`, type `cmd`, and press `Enter`.
     * **Release old IP:** Type command: `ipconfig /release`
     * **Renew IP from DHCP:** Type command: `ipconfig /renew`
-2.  **Verify obtained IP:**
+2.  <img src="https://img.icons8.com/color/20/000000/ip-address.png"/> **Verify obtained IP:**
     * Type command: `ipconfig /all`
     * Ensure the obtained IP is within the range `192.168.250.10 – 192.168.250.29`.
-3.  **Verify on DHCP Server interface (on Windows Server 2012 R2):**
+3.  <img src="https://img.icons8.com/color/20/000000/dhcp-server.png"/> **Verify on DHCP Server interface (on Windows Server 2012 R2):**
     * Open DHCP Manager.
     * Navigate to `IPv4` $\rightarrow$ `Scope1` $\rightarrow$ `Address Leases`.
     * You should see a list of IP addresses assigned to client machines, along with their hostnames and lease times.
@@ -250,19 +261,21 @@ This section details the steps for installing and configuring DNS and DHCP servi
 
 #### 3.1 Check network connectivity, DNS/DHCP services, and event logs on Server Manager.
 
-* **Check network connectivity:**
+* <img src="https://img.icons8.com/color/20/000000/network-connection.png"/> **Check network connectivity:**
     * Run `ping` command to test connectivity between server and client machines.
     * Ping from server to client machines (e.g., `ping 192.168.250.10`).
     * Ping from client machines to server (e.g., `ping 192.168.250.2`).
-* **Check DNS/DHCP services:**
+* <img src="https://img.icons8.com/color/20/000000/services.png"/> **Check DNS/DHCP services:**
     * Open Server Manager $\rightarrow$ **"Tools"** $\rightarrow$ **"DNS"** or **"DHCP"**.
     * In the DNS/DHCP management console, ensure services are running. If a service is stopped (red icon or "Stopped" status), right-click it and select "Start" or "Restart".
-* **View Event Logs:**
+* <img src="https://img.icons8.com/color/20/000000/event-log.png"/> **View Event Logs:**
     * Open Run dialog: Press `Window + R`, type `eventvwr`, and press `Enter`.
     * In "Event Viewer", navigate to **"Windows Logs"** $\rightarrow$ **"System"** or **"Application"**.
     * Check logs related to DNS (Event ID 4000-4001 for DNS Server) and DHCP (Event ID 1000-1002 for DHCP Server) for any errors or warnings.
 
-## III. Conclusion and Future Development
+---
+
+## ✅ III. Conclusion and Future Development
 
 ### 1. Conclusion
 
@@ -270,6 +283,6 @@ The DNS and DHCP system has been successfully deployed and configured, effective
 
 ### 2. Future Development
 
-* Upgrade the system to newer Windows Server versions to leverage advanced features and security.
-* Integrate additional essential network services such as Active Directory, Web Server (IIS), File Server, or VPN to build a more comprehensive infrastructure.
-* Expand the network scale to support multiple departments or new branches, potentially including VLANs and Routing.
+* <img src="https://img.icons8.com/color/20/000000/update.png"/> Upgrade the system to newer Windows Server versions to leverage advanced features and security.
+* <img src="https://img.icons8.com/color/20/000000/integration.png"/> Integrate additional essential network services such as Active Directory, Web Server (IIS), File Server, or VPN to build a more comprehensive infrastructure.
+* <img src="https://img.icons8.com/color/20/000000/expand.png"/> Expand the network scale to support multiple departments or new branches, potentially including VLANs and Routing.
