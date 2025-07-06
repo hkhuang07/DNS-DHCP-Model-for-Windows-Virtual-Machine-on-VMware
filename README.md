@@ -49,7 +49,7 @@ This project details the process of deploying and configuring essential network 
   </p>
 
   <p align="center">
-    <img src="demo/win2k_config" alt="Window 2000 Professional Configuration" width="800"/>
+    <img src="demo/win2k_config.gif" alt="Window 2000 Professional Configuration" width="800"/>
     </br>
     <em>Window 2000 Professional Configuration</em>
   </p>
