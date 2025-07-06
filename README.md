@@ -21,6 +21,11 @@ This project details the process of deploying and configuring essential network 
   <em>Windows Server 2012 Configuration and Ping to Clients</em>
 </p>
 
+<p align="center">
+  <img src="demo/project_network_diagram.jpg" alt="Network Diagram" width="800">
+  </br>
+  <em>Network Diagram</em>
+</p>
 
 ### Additional Configuration Clients
 <p align="center">
